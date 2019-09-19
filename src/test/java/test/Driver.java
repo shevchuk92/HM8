@@ -28,7 +28,7 @@ import org.openqa.selenium.opera.OperaDriver;
                     case CHROME:
                         WebDriverManager.chromedriver().setup();
                         ChromeOptions options = new ChromeOptions();
-                        options.addArguments("start-fullscreen");
+                        options.addArguments(arguments);
                         WebDriver driverChrome = new ChromeDriver(options);
                         return driverChrome;
 
