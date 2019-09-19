@@ -1,6 +1,6 @@
 package java;
 
- import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -52,19 +52,10 @@ import org.openqa.selenium.opera.OperaDriver;
                 }
                 ;
             }
+
             return null;
         };
 
-        public static void main (String[] args) {
-            String baseURL = "https://www.ukr.net/ua/";
-
-            for (Browser browser : Browser.values ()) {
-                System.out.println (browser.toString ());
-                WebDriver driver = Driver.getDriver (browser, "full-screen");
-                driver.get (baseURL);
-                driver.quit ();
-            }
-        }
 
 
     };
