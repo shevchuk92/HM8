@@ -1,16 +1,16 @@
 package java;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
-public class HomeWork5 {
 
 
-    public static class Driver {
+
+    public class Driver {
 
         private String arguments;
 
@@ -20,36 +20,33 @@ public class HomeWork5 {
             OPERA
         }
 
+        ;
 
 
-
-
-
-        public static WebDriver getDriver (Browser browser, String arguments) {
+        public static WebDriver getDriver(Browser browser, String arguments) {
             WebDriver driver;
 
             {
 
                 switch (browser) {
                     case CHROME:
-                        driver.ChromeDriver().setup ();
+                        WebDriverManager.chromedriver().setup();
                         ChromeOptions options = new ChromeOptions();
                         options.addArguments("start-fullscreen");
-                        WebDriver driverChrome = new ChromeDriver (options);
+                        WebDriver driverChrome = new ChromeDriver(options);
                         return driverChrome;
 
                     case FIREFOX:
-                        driver.firefoxdriver ().setup ();
-                        WebDriver driverFirefox = new FirefoxDriver ();
+                        WebDriverManager.firefoxdriver().setup();
+                        WebDriver driverFirefox = new FirefoxDriver();
                         driverFirefox.manage().window().maximize();
                         return driverFirefox;
 
 
                     case OPERA:
-                        driver.operadriver ().setup ();
-                        WebDriver driverOpera = new OperaDriver ();
+                        WebDriverManager.operadriver().setup();
+                        WebDriver driverOpera = new OperaDriver();
                         return driverOpera;
-
 
 
                 }
@@ -57,6 +54,7 @@ public class HomeWork5 {
             }
             return null;
         };
+
         public static void main (String[] args) {
             String baseURL = "https://www.ukr.net/ua/";
 
@@ -70,4 +68,4 @@ public class HomeWork5 {
 
 
     };
-}
+
