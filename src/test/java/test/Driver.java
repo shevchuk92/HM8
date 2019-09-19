@@ -1,4 +1,4 @@
-package java;
+package test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -14,11 +14,7 @@ import org.openqa.selenium.opera.OperaDriver;
 
         private String arguments;
 
-        public enum Browser {
-            CHROME,
-            FIREFOX,
-            OPERA
-        }
+
 
         ;
 
