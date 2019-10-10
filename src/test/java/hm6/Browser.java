@@ -1,4 +1,4 @@
-package test;
+package hm6;
 
 public enum Browser {
     CHROME,

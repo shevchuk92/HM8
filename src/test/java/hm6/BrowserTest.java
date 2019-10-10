@@ -1,5 +1,7 @@
-package test;
+package hm6;
 
+import hm6.Browser;
+import hm6.Driver;
 import org.openqa.selenium.WebDriver;
 
 public class BrowserTest {
